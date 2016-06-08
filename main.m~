@@ -27,7 +27,6 @@ for x=1:width
                radius = -radius
             end
             
-            %negative radius solution
            if radius<0
                radius =-radius;
                if angle>0
