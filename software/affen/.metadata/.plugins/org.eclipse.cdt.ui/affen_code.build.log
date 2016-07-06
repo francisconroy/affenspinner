@@ -1,0 +1,25 @@
+21:20:46 **** Incremental Build of configuration Release for project affen_code ****
+make -j7 all 
+Building file: ../source/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g -D"CPU_MKL26Z64VLH4" -DNDEBUG -I../CMSIS -I../board -I../drivers -I../startup -I../utilities -std=gnu99 -MMD -MP -MF"source/main.d" -MT"source/main.o" -c -o "source/main.o" "../source/main.c"
+Finished building: ../source/main.c
+ 
+Building target: affen_code.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g -T "../MKL26Z64xxx4_flash.ld" -Xlinker --gc-sections -Wl,-Map,"affen_code.map" --specs=nano.specs -specs=nosys.specs -Xlinker -z -Xlinker muldefs -o "affen_code.elf"  ./utilities/fsl_debug_console.o ./utilities/fsl_notifier.o ./utilities/fsl_sbrk.o ./utilities/fsl_shell.o  ./startup/startup_MKL26Z4.o ./startup/system_MKL26Z4.o  ./source/main.o  ./drivers/fsl_adc16.o ./drivers/fsl_clock.o ./drivers/fsl_cmp.o ./drivers/fsl_common.o ./drivers/fsl_cop.o ./drivers/fsl_dac.o ./drivers/fsl_dma.o ./drivers/fsl_dmamux.o ./drivers/fsl_flash.o ./drivers/fsl_gpio.o ./drivers/fsl_i2c.o ./drivers/fsl_i2c_dma.o ./drivers/fsl_llwu.o ./drivers/fsl_lpsci.o ./drivers/fsl_lpsci_dma.o ./drivers/fsl_lptmr.o ./drivers/fsl_pit.o ./drivers/fsl_pmc.o ./drivers/fsl_rcm.o ./drivers/fsl_rtc.o ./drivers/fsl_sai.o ./drivers/fsl_sai_dma.o ./drivers/fsl_sim.o ./drivers/fsl_smc.o ./drivers/fsl_spi.o ./drivers/fsl_spi_dma.o ./drivers/fsl_tpm.o ./drivers/fsl_tsi_v4.o ./drivers/fsl_uart.o ./drivers/fsl_uart_dma.o  ./board/board.o ./board/clock_config.o ./board/imagefile.o ./board/pin_mux.o   
+Finished building target: affen_code.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "affen_code.elf"  "affen_code.hex"
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "affen_code.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1280	    108	   3236	   4624	   1210	affen_code.elf
+Finished building: affen_code.siz
+Finished building: affen_code.hex
+ 
+ 
+
+21:20:46 Build Finished (took 120ms)
+
