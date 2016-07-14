@@ -28,21 +28,11 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* This is a template file for pins configuration created by New Kinetis SDK 2.x Project Wizard. Enjoy! */
+/* This is a template file for board configuration created by New Kinetis SDK 2.x Project Wizard. Enjoy! */
 
-#include "fsl_device_registers.h"
+#ifndef _IMAGEFILE_H_
+#define _IMAGEFILE_H_
 
+extern uint8_t img_bin[]; //declare varible in imagefile to be accessed by main
 
-
-
-
-/*******************************************************************************
- * Code
- ******************************************************************************/
-/*!
- * @brief Initialize all pins used in this example
- */
-void BOARD_InitPins(void)
-{
-
-}
+#endif /* _IMAGEFILE_H_ */

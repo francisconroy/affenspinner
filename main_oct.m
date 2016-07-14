@@ -67,7 +67,7 @@ disp('one down');
 %disp_circ_pix=37; %37cp |o|o|o|o|o|o|o|o|o| i.e 16 LEDS per side
 disp_circ_pix=37; %37cp |o|o|o|o|o|o|o|o|o| i.e 16 LEDS per side 
 excl_center=5; %5cp - circular rings, middle ring is a circle
-num_centers = round(disp_circ_pix/2,0); %including 0th center
+num_centers = round(disp_circ_pix/2); %including 0th center
 ang_reso = 180; %count per rotation
 seg_wid = 2*pi/ang_reso; %rad
 disp('two down')

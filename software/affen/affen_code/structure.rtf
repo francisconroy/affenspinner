@@ -1,0 +1,18 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Main structure\
+ - Process I2C data into the filter (KF) or something adequate. No fixed timer? \
+The filter will need a fixed something.. definitely in order to be able to average, etc. so perhaps a 100 Hz control loop should suffice. \
+- \
+\
+Timing criticality\
+- The most timing critical thing will be the intersection between the image segments, the update instant should be well defined an accurate. Perhaps the timing interval should be 1/8th / 1/16th of the segment to allow for each cathode to be powered once or twice for each segment, effectively dividing the system into more segments. In reality this update should happen multiple times per segment\
+\
+Lighting sequence \
+- Adjacent cathodes should be illuminated i.e. S1 inner and then S1 outer, S2 inner, S2 outer\'85. to end and then repeat. \
+\
+Update the lit LED\'92s i.e. S1, S2, S3, S4 pixels on a variable interval but display each on a fixed interval?? The fixed interval should be 1/16th of the smallest sector duration, this should improve the display appearance when the bicycle is travelling slowly. We only need 8bytes to be loaded into buffer  in order to contain the current \'91pixels\'92 and we could have an secondary buffer of 8bytes for the upcoming pixels, the buffers could swap with each other. }

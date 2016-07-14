@@ -32,10 +32,6 @@
 
 #include "fsl_device_registers.h"
 
-
-
-
-
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -44,5 +40,5 @@
  */
 void BOARD_InitPins(void)
 {
-
+  /* This is a template function for pins configuration. Intentionally empty */
 }

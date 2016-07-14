@@ -28,21 +28,47 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* This is a template file for pins configuration created by New Kinetis SDK 2.x Project Wizard. Enjoy! */
+/**
+ * This is template for main module created by New Kinetis SDK 2.x Project Wizard. Enjoy!
+ **/
 
-#include "fsl_device_registers.h"
+#include "stdint.h"
+#include "board.h"
+#include "pin_mux.h"
+#include "clock_config.h"
+#include "imagefile.h" //image file as binary data
 
 
+// Pin definitions
+#define UART_RX PTA1
+#define UART_TX PTA2
+#define I2_SCL PTB0
+#define I2_SDA	PTB1
+#define STATUSLED PTB16
+#define
 
-
-
-/*******************************************************************************
- * Code
- ******************************************************************************/
 /*!
- * @brief Initialize all pins used in this example
+ * @brief Application entry point.
  */
-void BOARD_InitPins(void)
-{
+int main(void) {
+  /* Init board hardware. */
+  BOARD_InitPins();
+  BOARD_BootClockRUN();
+  BOARD_InitDebugConsole();
 
+  /* Add your code here */
+
+  // what do we need to achieve?
+  // ISR iterations to indicate which position the wheel is in.
+  // Another ISR to set the 16 row changes per cycle
+  // image data somewhere..
+  // a function to map the image details to the LED settings
+
+
+
+
+
+  for(;;) { /* Infinite loop to avoid leaving the main function */
+    __asm("NOP"); /* something to use as a breakpoint stop while looping */
+  }
 }

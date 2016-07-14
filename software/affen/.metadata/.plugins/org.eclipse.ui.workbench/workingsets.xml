@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1467807607031_0" label="shell" name="shell"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1468354860939_1" label="i2c_read_accel_value_transfer" name="i2c_read_accel_value_transfer"/>
+<workingSet editPageId="org.eclipse.cdt.ui.CElementWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1468355941752_2" label="gpio_led_output" name="gpio_led_output">
+<item factoryID="org.eclipse.cdt.ui.PersistableCElementFactory" path="/gpio_led_output_frdmkl26z" type="4"/>
+</workingSet>
 </workingSetManager>

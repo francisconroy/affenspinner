@@ -38,6 +38,33 @@
 #include "clock_config.h"
 #include "imagefile.h" //image file as binary data
 
+
+// Pin definitions
+#define UART_RX PTA1
+#define UART_TX PTA2
+#define I2_SCL PTB0
+#define I2_SDA	PTB1
+#define STATUSLED PTB16
+#define ANALOGPT PTB2
+#define CA0 PTB3
+#define HALL PTC0
+#define CA1 PTC1
+#define CA2 PTC2
+#define CA3 PTC3
+#define CA4 PTC4
+#define CA5 PTC5
+#define CA6 PTC6
+#define CA7 PTC7
+#define AN0 PTD0
+#define AN1 PTD1
+#define AN2 PTD2
+#define AN3 PTD3
+#define AN4 PTD4
+#define AN5 PTD5
+#define AN6 PTD6
+#define AN7 PTD7
+
+
 /*!
  * @brief Application entry point.
  */
