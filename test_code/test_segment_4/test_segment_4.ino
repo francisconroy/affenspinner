@@ -67,5 +67,5 @@ void ledon(int number, int * plexleda, int * plexledc)
    digitalWrite(plexledc[i],LOW);
   }
   digitalWrite(plexledc[number],HIGH);
-   digitalWrite(plexleda[number],HIGH);
+  digitalWrite(plexleda[number],HIGH);
 }
